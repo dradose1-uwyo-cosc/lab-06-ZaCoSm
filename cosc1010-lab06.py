@@ -1,8 +1,8 @@
-# Your Name Here
+# Zack smith 
 # UWYO COSC 1010
-# Submission Date
+# Submission Date: 10/15/2024
 # Lab 06
-# Lab Section: 
+# Lab Section: 13
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -62,8 +62,42 @@ ibmkdwkqmdkjesqnjiqpijixbwjhenmsrrlpcseliiajlvcaac
 zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 """
 random_string = random_string.replace("\n","") #remove all newline characters
-print(len(random_string)) # Print out the size for reference 
+print(len(random_string))
+ # Print out the size for reference 
+randomString = "abcsdefghijklmnopqrstuvwxyz"
+compString = {}
+for char in randomString:
+    for char1 in random_string:
+        if char == char1:
+            compString[char] = 0
 
+for char in random_string:
+    for keys in compString:
+        if char == keys:
+            compString[keys] = compString[keys] + 1
+print(compString)
+max_num = 0
+min_num = compString["a"]
+most_occurred = ""
+least_occurred = ""
+for let in compString:
+    if compString[let] > max_num:
+        max_num = compString[let]
+for let in compString:
+    if compString[let] == max_num:
+        most_occurred = let
+
+for let in compString:
+    if compString[let] < min_num:
+        min_num = compString[let]
+for let in compString:
+    if compString[let] == min_num:
+        least_occurred = let
+percentDict = {}
+for let in compString:
+    perc = compString[let] / 2500 * 100 
+    percentDict[let] = perc
+print (percentDict)
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
 # Output each letter and its corresponding occurrence in alphabetical order
@@ -85,16 +119,15 @@ print(len(random_string)) # Print out the size for reference
 
 # Output: each letter and its corresponding occurrence in alphabetical order
 
-print("*"*75)
+#print("*"*75)
 # Output which letter occurred the most 
 
-most_occurred = ""
-least_occurred = ""
+
 
 print(f"The letter that occurred the most is {most_occurred}")
-print("*"*75)
+#print("*"*75)
 # Output which letter occurred the least 
 print(f"The letter that occurred the most is {least_occurred}")
-print("*"*75)
+#print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
